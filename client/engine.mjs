@@ -22,11 +22,11 @@ alt.on('keyup', (key) => {
     if (key == 'F'.charCodeAt(0)) {
         if (timeKeyPressed > 0) { // If we're pressing the button and the player is in a vehicle
             timeKeyPressed = Date.now() - timeKeyPressed // Get the difference between key is pressed and released
-            if (timeKeyPressed <= 500) { // If it's pressed for longer then 500ms
-                interval = alt.setInterval(turnEngineOn, 100)
+            if (timeKeyPressed <= 500) { // If it's pressed for lesser then 500ms
+                interval = alt.setInterval(turnEngineOn, 100) // Leave the engine on
                 return
             }
-            clear()
+            clear() // Clear variables
         }
     }
 })
@@ -37,7 +37,7 @@ alt.on('keyup', (key) => {
 function turnEngineOn() {
     if (vehicle && !alt.Player.local.vehicle) { // If there's a vehicle & the player isn't in a vehicle anymore
         native.setVehicleEngineOn(vehicle, true, true, false) // Set the engine on
-        clear()
+        clear() // Clear variables
     }
 }
 
