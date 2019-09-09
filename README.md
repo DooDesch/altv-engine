@@ -1,7 +1,7 @@
 ﻿# alt:V - Leave engine running on exit
 
 This script leaves the engine running, if you exit the vehicle by pressing 'F'.
-If you're pressing it longer then 0.5 seconds, it will turn the engine off.
+If you're pressing it longer than 0.5 seconds, it will turn the engine off.
 
 ---
 
